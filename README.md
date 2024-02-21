@@ -3,12 +3,9 @@
 this is a simple python app that let's you deploy microsoft's [EdgeTTS](https://pypi.org/project/edge-tts) as an HTTP api via modal <:)
 
 
-here's an example using this repo
+here's a [lorem ipsum demo](https://cdn-crayo.com/crayo-admin%2Florem-ipsum.mp3) using this repo
 
-<audio controls>
-  <source src="https://cdn-crayo.com//user-uploads/clrv9sz9z0000reuymqz26m0b/1cdc78ca-5f04-41df-a106-3168927b46aa.mp3" type="audio/mpeg"> 
-Error: Your browser does not support the audio element.
-</audio>
+
 
 ### Setup
 
@@ -37,10 +34,6 @@ YAY! You've got a working API. Now let's test it out.
   const data = await response.arrayBuffer();
   const buffer = Buffer.from(data);
 `
-
-### Inference benchmarks
--> 1 minute of voice in under 15 seconds
--> 1 minute of voice for under $0.00089
 
 #### Additional notes
 This code does not include authentication. If you expose the modal url to client, it *can* be abused. If you call inferencing from a server, it's not a big deal imo. I personally use a simple secret setup as a redundancy measure since we call inferencing in a rate-limited backend. Refer to the [authentication docs](https://modal.com/docs/guide/webhooks#authentication) for best practices.
